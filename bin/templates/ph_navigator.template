@@ -16,26 +16,24 @@ class XXXNavigator extends ProcessNavigator<XXXBloc, XXXState> {
         _page = XXXPage(bloc: bloc);
 
   @override
-  Future<void> onEnd(XXXBloc bloc) {
-    // TODO: implement onEnd
-    throw UnimplementedError();
+  Future<void> onEnd(XXXBloc bloc) async {
+    Navigator.of(_context).pop();
   }
 
   @override
-  Future<void> onRevive(XXXBloc bloc) {
-    // TODO: implement onRevive
-    throw UnimplementedError();
+  Future<void> onRevive(XXXBloc bloc) async {
+    //
   }
 
   @override
-  Future<void> onStart(XXXBloc bloc) {
-    // TODO: implement onStart
-    throw UnimplementedError();
+  Future<void> onStart(XXXBloc bloc) async {
+    await Navigator.of(_context).push(
+      MaterialPageRoute(builder: (context) => _page),
+    );
   }
 
   @override
-  Future<void> onStateChanged(XXXBloc bloc, XXXState state) {
-    // TODO: implement onStateChanged
-    throw UnimplementedError();
+  Future<void> onStateChanged(XXXBloc bloc, XXXState state) async {
+    //
   }
 }
