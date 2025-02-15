@@ -1,0 +1,7 @@
+import 'package:bloc_process/bloc_process.dart';
+import 'package:flutter/material.dart';
+
+@immutable
+class XXXState implements ProcessBlocState {
+  const XXXState.initial();
+}

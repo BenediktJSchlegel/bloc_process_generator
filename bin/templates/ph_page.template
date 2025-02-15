@@ -1,0 +1,17 @@
+import 'package:flutter/material.dart';
+
+import '../bloc/{ph}_bloc.dart';
+
+class XXXPage extends StatelessWidget {
+  final XXXBloc _bloc;
+
+  const XXXPage({
+    super.key,
+    required XXXBloc bloc,
+  }) : _bloc = bloc;
+
+  @override
+  Widget build(BuildContext context) {
+    return const Placeholder();
+  }
+}

@@ -1,0 +1,41 @@
+import 'package:bloc_process/bloc_process.dart';
+import 'package:flutter/material.dart';
+
+import '../../bloc/state/{ph}_state.dart';
+import '../../bloc/{ph}_bloc.dart';
+import '../../pages/{ph}_page.dart';
+
+class XXXNavigator extends ProcessNavigator<XXXBloc, XXXState> {
+  final BuildContext _context;
+  final XXXPage _page;
+
+  XXXNavigator({
+    required BuildContext context,
+    required XXXBloc bloc,
+  })  : _context = context,
+        _page = XXXPage(bloc: bloc);
+
+  @override
+  Future<void> onEnd(XXXBloc bloc) {
+    // TODO: implement onEnd
+    throw UnimplementedError();
+  }
+
+  @override
+  Future<void> onRevive(XXXBloc bloc) {
+    // TODO: implement onRevive
+    throw UnimplementedError();
+  }
+
+  @override
+  Future<void> onStart(XXXBloc bloc) {
+    // TODO: implement onStart
+    throw UnimplementedError();
+  }
+
+  @override
+  Future<void> onStateChanged(XXXBloc bloc, XXXState state) {
+    // TODO: implement onStateChanged
+    throw UnimplementedError();
+  }
+}

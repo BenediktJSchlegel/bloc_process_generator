@@ -1,0 +1,19 @@
+import 'package:bloc_process/bloc_process.dart';
+
+import '{ph}_event.dart';
+import '{ph}_input.dart';
+import '{ph}_output.dart';
+import '{ph}_state.dart';
+
+class XXXBloc
+    extends MultiChannelProcessBloc<XXXInput, XXXEvent, XXXState, XXXOutput> {
+  XXXBloc() : super(const XXXState.initial()) {
+    mountChannels([]);
+  }
+
+  @override
+  initialize(XXXInput input) {
+    // TODO: implement initialize
+    throw UnimplementedError();
+  }
+}

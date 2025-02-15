@@ -1,0 +1,31 @@
+import 'package:bloc_process/bloc_process.dart';
+import 'package:flutter/material.dart';
+
+import '../bloc/event/{ph}_event.dart';
+import '../bloc/state/{ph}_state.dart';
+import '../bloc/{ph}_bloc.dart';
+import 'io/{ph}_input.dart';
+import 'io/{ph}_output.dart';
+import 'navigation/{ph}_navigator.dart';
+
+class XXXProcessController extends ProcessController<XXXInput, XXXEvent,
+    XXXState, XXXOutput, XXXBloc, XXXNavigator> {
+  XXXProcessController({
+    required super.bloc,
+    required super.navigationBuilder,
+  });
+
+  static void create(BuildContext context) {
+    final XXXBloc bloc = XXXBloc();
+
+    final XXXProcessController controller = XXXProcessController(
+      bloc: bloc,
+      navigationBuilder: (context) =>
+          XXXNavigator(context: context, bloc: bloc),
+    );
+
+    controller.start(context, XXXInput(), _onCallback);
+  }
+
+  static Future<void> _onCallback(XXXOutput output) async {}
+}
