@@ -11,7 +11,6 @@ void generateFiles(
     baseDir.createSync(recursive: true);
   }
 
-  // Helper function to create a file with content
   void createFile(String filePath, String content) {
     final file = File(filePath);
     if (!file.existsSync()) {
@@ -20,9 +19,10 @@ void generateFiles(
     }
   }
 
-  // Create directories
   final processDir = Directory(p.join(basePath, ph, 'process'));
+
   processDir.createSync(recursive: true);
+
   Directory(p.join(basePath, ph, 'process', 'io')).createSync(recursive: true);
   Directory(p.join(basePath, ph, 'process', 'navigation'))
       .createSync(recursive: true);
@@ -109,10 +109,7 @@ void generateFiles(
 }
 
 String resolveTemplate(String name, String lowercase, String uppercase) {
-  //final templateFile = File("templates/$name.template");
-
-  final scriptDir =
-      File(Platform.script.toFilePath()).parent; // Directory of the script
+  final scriptDir = File(Platform.script.toFilePath()).parent;
   final templatesDir = p.join(scriptDir.path, 'templates');
   final templateFile = File(p.join(templatesDir, '$name.template'));
 

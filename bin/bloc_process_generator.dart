@@ -27,7 +27,6 @@ void main(List<String> arguments) {
 
     run(placeholder, upperPlaceholder, location);
   } on FormatException catch (e) {
-    // Print usage information if an invalid argument was provided.
     print(e.message);
     print('');
     printUsage(argParser);
